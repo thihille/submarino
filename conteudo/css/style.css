@@ -1,0 +1,664 @@
+html {
+	-webkit-tap-highlight-color: rgba(255,0,255,.8);
+}
+.blueDiv {
+	-webkit-tap-highlight-color: rgba(255,0,0,0.9);
+}
+
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('myriadpro-regular.eot');
+    src: url('myriadpro-regular.eot') format('embedded-opentype'),
+         url('myriadpro-regular.woff') format('woff'),
+         url('myriadpro-regular.ttf') format('truetype'),
+         url('myriadpro-regular.svg#MyriadProRegular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+    font-family: 'MyriadProLight';
+    src: url('myriadpro-light.eot');
+    src: url('myriadpro-light.eot') format('embedded-opentype'),
+         url('myriadpro-light.woff') format('woff'),
+         url('myriadpro-light.ttf') format('truetype'),
+         url('myriadpro-light.svg#MyriadProLight') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('proximanova-light-webfont.eot');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-light-webfont.woff') format('woff'),
+         url('proximanova-light-webfont.ttf') format('truetype'),
+         url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('proximanova-regular-webfont.eot');
+    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-regular-webfont.woff') format('woff'),
+         url('proximanova-regular-webfont.ttf') format('truetype'),
+         url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.container {
+	width:1024px;
+	height:660px; 
+	overflow:hidden; 
+	display:block; 
+	position:absolute; 
+	padding:0; 
+	top:0; 
+	left:0; 
+	margin:0;
+	background:url(../img/background.jpg) no-repeat center;
+	border:1px solid rgba(255,255,255,.8);
+	
+	cursor:default;
+}
+.overlayOptions {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0);
+	z-index:91;
+}
+.overlay-feedback {
+	width:100%;
+	height:100%;
+	position:absolute;
+	display:none;
+	left:0;
+	top:63px;
+	background-color:rgba(255,255,255,.8);
+	z-index:90;
+}
+.overlay-feedback .feedback {
+	width:600px;
+	height:300px;
+	padding:15px 15px 0 15px;
+	margin:120px auto 0 auto;
+	background-color:#fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	transform:scale(0);
+	-moz-transform:scale(0);
+	-ms-transform:scale(0);
+	-o-transform:scale(0);
+	-webkit-transform:scale(0);
+	transition:all .8s ease;
+	-moz-transition:all .8s ease;
+	-ms-transition:all .8s ease;
+	-o-transition:all .8s ease;
+	-webkit-transition:all .8s ease;
+
+}
+.overlay-feedback .feedback .info {
+	position:relative;	
+}
+
+.overlay-feedback .feedback .info p {
+	padding:0;
+	margin:0;
+	display:block;
+	width:300px;
+	font-family: 'MyriadProRegular';
+	text-align:justify;
+	font-size:23px;
+}
+.overlay-feedback .comImg img {
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+.overlay-feedback .comImg p {
+	float:left;
+}
+.overlay-feedback .semImg img {
+	display:none;
+	float:left;
+	margin-right:10px;
+}
+.overlay-feedback .semImg p {
+	float:left;
+	width:600px !important;
+}
+.overlay-feedback .semImg {
+	width:600px;
+	height:165px;
+	padding:15px 15px 0 15px;
+	margin:180px auto 0 auto;
+	background-color:#fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.overlay-feedback .semImg .btnFechaPopUp {
+	display:block;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin:170px 0 0 -75px;
+	width:150px;
+	height:50px;
+	padding:5px 0 0 0;
+	font-family: 'MyriadProLight';
+	font-size:31px;
+	text-align:center;
+	color:#fff;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	cursor:pointer;
+    background-color: darkorange;
+}
+.btnFechaPopUp {
+	display:block;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin:300px 0 0 -75px;
+	width:150px;
+	height:50px;
+	padding:5px 0 0 0;
+	font-family: 'MyriadProLight';
+	font-size:31px;
+	text-align:center;
+	color:#fff;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	cursor:pointer;
+    background-color: darkorange;
+}
+.btnFechaPopUp:hover {
+	box-shadow:0 0 30px rgba(0,0,0,0.2);
+    background-color: orangered;
+}
+.overlay-small {
+	width:100%;
+	height:100%;
+	position:absolute;
+	display:none;
+	left:0;
+	top:0;
+	background-color:rgba(255,255,255,.8);
+	z-index:90;
+}
+.overlay-small .feedsmall {
+	width:800px;
+	height:150px;
+	padding:15px 15px 0 15px;
+	margin:190px auto 0 auto;
+	background-color:#fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	transform:scale(0);
+	-moz-transform:scale(0);
+	-ms-transform:scale(0);
+	-o-transform:scale(0);
+	-webkit-transform:scale(0);
+	transition:all .8s ease;
+	-moz-transition:all .8s ease;
+	-ms-transition:all .8s ease;
+	-o-transition:all .8s ease;
+	-webkit-transition:all .8s ease;
+    border: 5px solid orange;
+}
+.overlay-small .feedsmall .info {
+	position:relative;	
+}
+
+.overlay-small .feedsmall .info p {
+	padding:0;
+	margin:40px 0 0 0;
+	display:block;
+	width:655px;
+	font-family: 'MyriadProRegular';
+	text-align:center;
+	text-transform:uppercase;
+	font-size:31px;
+}
+.overlay-small .feedsmall img {
+	display:block;
+	float:left;
+	margin-right:10px;
+}
+.overlay-small .feedsmall p {
+	float:left;
+}
+.btnFechaSmall {
+	display:block;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin:150px 0 0 -75px;
+	width:150px;
+	height:50px;
+	padding:18px 0 0 0;
+	font-family: 'MyriadProRegular';
+	font-size:31px;
+	text-align:center;
+	color:#fff;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	cursor:pointer;
+    background-color: orange;
+}
+.btnFechaSmall:hover {
+	box-shadow:0 0 30px rgba(0,0,0,0.2);
+    background-color: orangered;
+}
+.btnFechaSmallFinaliza {
+	display:none;
+	position:absolute;
+	top:0;
+	left:50%;
+	margin:150px 0 0 -85px;
+	width:186px;
+	height:50px;
+	padding:18px 0 0 0;
+	font-family: 'MyriadProLight';
+	font-size:31px;
+	text-align:center;
+	color:#fff;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	cursor:pointer;
+    background-color: orange;
+}
+#instrucoes {
+	display:none;
+	position:absolute;
+	right:5px;
+	top:70px;
+	margin:0;
+	z-index:99;
+	padding:20px;
+	color:#fff;
+	text-shadow:1px 1px 0 rgba(0,0,0,.3);
+	background-color:#FF0;
+	border:3px solid rgba(255,255,255,0.5);
+}
+#instrucoes p {
+	padding:15px;
+	margin:0;
+	font-family: 'MyriadProLight';
+	font-size:23px;
+	color:#fff;
+}
+.spcint {
+	display:inline-block;
+	padding-left:1px;
+	width:1px;
+}
+
+#timer {
+	position:absolute;
+	width:195px;
+	height:75px;
+	background:url(../img/timer.png) no-repeat left top;
+	font-family: 'MyriadProLight';
+	font-size:49px;
+	color:#FFF;
+	padding:5px 0 0 90px;
+	top:0;
+	left:0;
+	margin:30px 0 0 65px;
+}
+	
+#painel {
+	position:absolute;
+	width:375px;
+	height:75px;
+	top:0;
+	left:0;
+	margin:495px 0 0 18px;
+	background:url(../img/painel.png) no-repeat center;
+}
+#painel .acertos {
+	display:block;
+	width:70px;
+	text-align:center;
+	font-family: 'MyriadProLight';
+	font-size:61px;
+	float:left;
+	margin-left:110px;
+	color:#297831;
+}
+#painel .erros {
+	display:block;
+	width:70px;
+	text-align:center;
+	font-family: 'MyriadProLight';
+	font-size:61px;
+	float:left;
+	color:#960000;
+	margin-left:32px;
+}
+#movimento{
+    position: absolute;
+    animation: move 6s ease infinite;
+    -webkit-animation: move 6s ease infinite;
+    -moz-animation: move 6s ease infinite;
+}
+.peixes {
+	position:absolute;
+	top:0;
+	left:0;
+	margin:160px 0 0 0px;	
+	width:397px;
+	height:450px;
+	background:url(../img/animacao.png) no-repeat left center;
+    animation: animaSprite 2s steps(10) infinite;
+    -webkit-animation: animaSprite 2s steps(10) infinite;
+    -moz-animation: animaSprite 2s esteps(10) infinite;
+
+}
+@keyframes animaSprite {
+   100% { background-position: -3970px; }
+}
+@-webkit-keyframes animaSprite {
+   100% { background-position: -3970px; }
+}
+@-moz-keyframes animaSprite {
+   100% { background-position: -3970px; }
+}
+@keyframes move {
+    0%{top:60px; transform: rotate(0deg);}
+    50%{top:65px; transform: rotate(1deg);}
+    100%{top:60px; transform: rotate(0deg);}
+}
+@-webkit-keyframes move {
+    0%{top:60px; -webkit-transform: rotate(0deg);}
+    50%{top:65px; -webkit-transform: rotate(1deg);}
+    100%{top:60px; -webkit-transform: rotate(0deg);}
+}
+@-moz-keyframes move {
+    0%{top:60px; -moz-transform: rotate(0deg);}
+    50%{top:65px; -moz-transform: rotate(1deg);}
+    100%{top:60px; -moz-transform: rotate(0deg);}
+}
+.vazio{
+	background:url(../img/bola-vazia.png) no-repeat;
+	width:60px;
+	height:71px;
+	float:left;
+	margin:2px 0 0 2px;
+}
+.full{
+	background:url(../img/bola-cheia.png) no-repeat;
+}
+#blocoAcao {
+	width:400px;
+	position:relative;
+	float:right;
+	
+}
+#blocoGame {
+	width:620px;
+	position:relative;
+	float:left;
+}
+
+table {
+	position:absolute;
+	right:-2px;
+	margin:60px 0 0 0;
+}
+table tr td {
+	padding:7px 7px;
+}
+
+.carta{
+	background: url(../img/costas.png) no-repeat;
+	width:140px;
+	height:180px;
+	cursor:pointer;
+}
+#fase2, #fase3 {
+	display:none;	
+}
+#fase1 .carta.tema1.virada{
+background:url(../img/cartas1.png) no-repeat 0 0;
+}
+#fase1 .carta.tema2.virada{
+background:url(../img/cartas1.png) no-repeat -141px 0;
+}
+#fase1 .carta.tema3.virada{
+background:url(../img/cartas1.png) no-repeat -282px 0;
+}
+#fase1 .carta.tema4.virada{
+background:url(../img/cartas1.png) no-repeat -423px 0;
+}
+#fase1 .carta.tema5.virada{
+background:url(../img/cartas1.png) no-repeat -564px 0;
+}
+#fase1 .carta.tema6.virada{
+background:url(../img/cartas1.png) no-repeat -705px 0;
+}
+#fase1 .carta.tema7.virada{
+background:url(../img/cartas1.png) no-repeat 0 -183px;
+}
+#fase1 .carta.tema8.virada{
+background:url(../img/cartas1.png) no-repeat -141px -183px;
+}
+#fase1 .carta.tema9.virada{
+background:url(../img/cartas1.png) no-repeat -282px -183px;
+}
+#fase1 .carta.tema10.virada{
+background:url(../img/cartas1.png) no-repeat -423px -183px;
+}
+#fase1 .carta.tema11.virada{
+background:url(../img/cartas1.png) no-repeat -564px -183px;
+}
+#fase1 .carta.tema12.virada{
+background:url(../img/cartas1.png) no-repeat -705px -183px;
+}
+#fase1 .carta.tema1.fixa{
+background:url(../img/cartas1.png) no-repeat -1px -366px;
+}
+#fase1 .carta.tema2.fixa{
+background:url(../img/cartas1.png) no-repeat -142px -366px;
+}
+#fase1 .carta.tema3.fixa{
+background:url(../img/cartas1.png) no-repeat -283px -366px;
+}
+#fase1 .carta.tema4.fixa{
+background:url(../img/cartas1.png) no-repeat -424px -366px;
+}
+#fase1 .carta.tema5.fixa{
+background:url(../img/cartas1.png) no-repeat -565px -366px;
+}
+#fase1 .carta.tema6.fixa{
+background:url(../img/cartas1.png) no-repeat -706px -366px;
+}
+#fase1 .carta.tema7.fixa{
+background:url(../img/cartas1.png) no-repeat -2px -549px;
+}
+#fase1 .carta.tema8.fixa{
+background:url(../img/cartas1.png) no-repeat -143px -549px;
+}
+#fase1 .carta.tema9.fixa{
+background:url(../img/cartas1.png) no-repeat -284px -549px;
+}
+#fase1 .carta.tema10.fixa{
+background:url(../img/cartas1.png) no-repeat -425px -549px;
+}
+#fase1 .carta.tema11.fixa{
+background:url(../img/cartas1.png) no-repeat -566px -549px;
+}
+#fase1 .carta.tema12.fixa{
+background:url(../img/cartas1.png) no-repeat -707px -549px;
+}
+#fase2 .carta.tema1.virada{
+background:url(../img/cartas2.png) no-repeat 0 0;
+}
+#fase2 .carta.tema2.virada{
+background:url(../img/cartas2.png) no-repeat -141px 0;
+}
+#fase2 .carta.tema3.virada{
+background:url(../img/cartas2.png) no-repeat -282px 0;
+}
+#fase2 .carta.tema4.virada{
+background:url(../img/cartas2.png) no-repeat -423px 0;
+}
+#fase2 .carta.tema5.virada{
+background:url(../img/cartas2.png) no-repeat -564px 0;
+}
+#fase2 .carta.tema6.virada{
+background:url(../img/cartas2.png) no-repeat -705px 0;
+}
+#fase2 .carta.tema7.virada{
+background:url(../img/cartas2.png) no-repeat 0 -183px;
+}
+#fase2 .carta.tema8.virada{
+background:url(../img/cartas2.png) no-repeat -141px -183px;
+}
+#fase2 .carta.tema9.virada{
+background:url(../img/cartas2.png) no-repeat -282px -183px;
+}
+#fase2 .carta.tema10.virada{
+background:url(../img/cartas2.png) no-repeat -423px -183px;
+}
+#fase2 .carta.tema11.virada{
+background:url(../img/cartas2.png) no-repeat -564px -183px;
+}
+#fase2 .carta.tema12.virada{
+background:url(../img/cartas2.png) no-repeat -705px -183px;
+}
+#fase2 .carta.tema1.fixa{
+background:url(../img/cartas2.png) no-repeat -1px -366px;
+}
+#fase2 .carta.tema2.fixa{
+background:url(../img/cartas2.png) no-repeat -142px -366px;
+}
+#fase2 .carta.tema3.fixa{
+background:url(../img/cartas2.png) no-repeat -283px -366px;
+}
+#fase2 .carta.tema4.fixa{
+background:url(../img/cartas2.png) no-repeat -424px -366px;
+}
+#fase2 .carta.tema5.fixa{
+background:url(../img/cartas2.png) no-repeat -565px -366px;
+}
+#fase2 .carta.tema6.fixa{
+background:url(../img/cartas2.png) no-repeat -706px -366px;
+}
+#fase2 .carta.tema7.fixa{
+background:url(../img/cartas2.png) no-repeat -2px -549px;
+}
+#fase2 .carta.tema8.fixa{
+background:url(../img/cartas2.png) no-repeat -143px -549px;
+}
+#fase2 .carta.tema9.fixa{
+background:url(../img/cartas2.png) no-repeat -284px -549px;
+}
+#fase2 .carta.tema10.fixa{
+background:url(../img/cartas2.png) no-repeat -425px -549px;
+}
+#fase2 .carta.tema11.fixa{
+background:url(../img/cartas2.png) no-repeat -566px -549px;
+}
+#fase2 .carta.tema12.fixa{
+background:url(../img/cartas2.png) no-repeat -707px -549px;
+}
+#fase3 .carta.tema1.virada{
+background:url(../img/cartas3.png) no-repeat 0 0;
+}
+#fase3 .carta.tema2.virada{
+background:url(../img/cartas3.png) no-repeat -141px 0;
+}
+#fase3 .carta.tema3.virada{
+background:url(../img/cartas3.png) no-repeat -282px 0;
+}
+#fase3 .carta.tema4.virada{
+background:url(../img/cartas3.png) no-repeat -423px 0;
+}
+#fase3 .carta.tema5.virada{
+background:url(../img/cartas3.png) no-repeat -564px 0;
+}
+#fase3 .carta.tema6.virada{
+background:url(../img/cartas3.png) no-repeat -705px 0;
+}
+#fase3 .carta.tema7.virada{
+background:url(../img/cartas3.png) no-repeat 0 -183px;
+}
+#fase3 .carta.tema8.virada{
+background:url(../img/cartas3.png) no-repeat -141px -183px;
+}
+#fase3 .carta.tema9.virada{
+background:url(../img/cartas3.png) no-repeat -282px -183px;
+}
+#fase3 .carta.tema10.virada{
+background:url(../img/cartas3.png) no-repeat -423px -183px;
+}
+#fase3 .carta.tema11.virada{
+background:url(../img/cartas3.png) no-repeat -564px -183px;
+}
+#fase3 .carta.tema12.virada{
+background:url(../img/cartas3.png) no-repeat -705px -183px;
+}
+#fase3 .carta.tema1.fixa{
+background:url(../img/cartas3.png) no-repeat -1px -366px;
+}
+#fase3 .carta.tema2.fixa{
+background:url(../img/cartas3.png) no-repeat -142px -366px;
+}
+#fase3 .carta.tema3.fixa{
+background:url(../img/cartas3.png) no-repeat -283px -366px;
+}
+#fase3 .carta.tema4.fixa{
+background:url(../img/cartas3.png) no-repeat -424px -366px;
+}
+#fase3 .carta.tema5.fixa{
+background:url(../img/cartas3.png) no-repeat -565px -366px;
+}
+#fase3 .carta.tema6.fixa{
+background:url(../img/cartas3.png) no-repeat -706px -366px;
+}
+#fase3 .carta.tema7.fixa{
+background:url(../img/cartas3.png) no-repeat -2px -549px;
+}
+#fase3 .carta.tema8.fixa{
+background:url(../img/cartas3.png) no-repeat -143px -549px;
+}
+#fase3 .carta.tema9.fixa{
+background:url(../img/cartas3.png) no-repeat -284px -549px;
+}
+#fase3 .carta.tema10.fixa{
+background:url(../img/cartas3.png) no-repeat -425px -549px;
+}
+#fase3 .carta.tema11.fixa{
+background:url(../img/cartas3.png) no-repeat -566px -549px;
+}
+#fase3 .carta.tema12.fixa{
+background:url(../img/cartas3.png) no-repeat -707px -549px;
+}
+
+/***************************************************************** OBJETO */

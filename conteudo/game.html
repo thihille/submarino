@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="expires" content="0" />
+	<meta name="author" content="Editora do Brasil" />
+	<meta name="copyright" content="© 2014 Editoradobrasil.com.br" />
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/animate.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script type="text/javascript" src="../js/carrega_oed.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	<title></title>
+</head>
+
+<body>
+<div id="init" class="container" data-fullscreen="true">
+<!-- Start code -->
+	<div id="content">
+		<!-- Overlay Feed -->
+		<div class="overlay-feedback">
+			<div class="feedback">
+				<div class="info">
+					<img src="img/imgMsgFeed.png" alt="" width="290" height="285">
+					<p>
+						
+					</p>
+					<div class="btnFechaPopUp">
+						FECHAR
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Overlay Small -->
+		<div class="overlay-small">
+			<div class="feedsmall">
+				<div class="info">
+					<img src="img/imgMsgFeed.png" alt="" width="130" height="130">
+					<p>
+						Mensagem de FeedBack
+					</p>
+					<div class="btnFechaSmall">
+						FECHAR
+					</div>
+					<div class="btnFechaSmallFinaliza">
+						NOVO JOGO
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="blocoAcao">
+            <div id="movimento">
+                <div class="peixes"></div>
+            </div>
+		</div>
+		<div id="blocoGame">
+			<table id="fase1" class="fase1" cellpadding="0" cellspacing="0">
+				<tr class="cima">
+					<td>
+						<div class="carta tema1" data-resp="1"></div>
+					</td>
+					<td>
+						<div class="carta tema2" data-resp="2"></div>
+					</td>
+					<td>
+						<div class="carta tema3" data-resp="3"></div>
+					</td>
+					<td>
+						<div class="carta tema4" data-resp="4"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="carta tema5" data-resp="5"></div>
+					</td>
+					<td>
+						<div class="carta tema6" data-resp="6"></div>
+					</td>
+					<td>
+						<div class="carta tema7" data-resp="1"></div>
+					</td>
+					<td>
+						<div class="carta tema8" data-resp="2"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="carta tema9" data-resp="3"></div>
+					</td>
+					<td>
+						<div class="carta tema10" data-resp="4"></div>
+					</td>
+					<td>
+						<div class="carta tema11" data-resp="5"></div>
+					</td>
+					<td>
+						<div class="carta tema12" data-resp="6"></div>
+					</td>
+				</tr>
+			</table>
+			<table id="fase2" class="fase2" cellpadding="0" cellspacing="0">
+				<tr class="cima">
+					<td>
+						<div class="carta tema1" data-resp="1"></div>
+					</td>
+					<td>
+						<div class="carta tema2" data-resp="2"></div>
+					</td>
+					<td>
+						<div class="carta tema3" data-resp="3"></div>
+					</td>
+					<td>
+						<div class="carta tema4" data-resp="4"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="carta tema5" data-resp="5"></div>
+					</td>
+					<td>
+						<div class="carta tema6" data-resp="6"></div>
+					</td>
+					<td>
+						<div class="carta tema7" data-resp="1"></div>
+					</td>
+					<td>
+						<div class="carta tema8" data-resp="2"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="carta tema9" data-resp="3"></div>
+					</td>
+					<td>
+						<div class="carta tema10" data-resp="4"></div>
+					</td>
+					<td>
+						<div class="carta tema11" data-resp="5"></div>
+					</td>
+					<td>
+						<div class="carta tema12" data-resp="6"></div>
+					</td>
+				</tr>
+			</table>
+			<table id="fase3" class="fase3" cellpadding="0" cellspacing="0">
+				<tr class="cima">
+					<td>
+						<div class="carta tema1" data-resp="1"></div>
+					</td>
+					<td>
+						<div class="carta tema2" data-resp="2"></div>
+					</td>
+					<td>
+						<div class="carta tema3" data-resp="3"></div>
+					</td>
+					<td>
+						<div class="carta tema4" data-resp="4"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="carta tema5" data-resp="5"></div>
+					</td>
+					<td>
+						<div class="carta tema6" data-resp="6"></div>
+					</td>
+					<td>
+						<div class="carta tema7" data-resp="1"></div>
+					</td>
+					<td>
+						<div class="carta tema8" data-resp="2"></div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="carta tema9" data-resp="3"></div>
+					</td>
+					<td>
+						<div class="carta tema10" data-resp="4"></div>
+					</td>
+					<td>
+						<div class="carta tema11" data-resp="5"></div>
+					</td>
+					<td>
+						<div class="carta tema12" data-resp="6"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<!-- Final code -->
+<img src="img/background.jpg" alt="" width="1024" height="660" class="blurBck">
+</div>
+
+
+
+<script type="text/javascript">
+function randomCards(){
+	var array = new Array();
+	var cnt1 = 0;
+	var cnt2 = 0;
+	$('#fase1 td').each(function(){
+		array[cnt2] = $(this).html();
+		cnt2++
+	})
+	array = shuffle(array)
+	$('#fase1 td').each(function(){
+		$(this).html(array[cnt1]);
+		cnt1++
+	})
+}
+function randomCards2(){
+	var array = new Array();
+	var cnt3 = 0;
+	var cnt4 = 0;
+	$('#fase2 td').each(function(){
+		array[cnt4] = $(this).html();
+		cnt4++
+	})
+	array = shuffle2(array)
+	$('#fase2 td').each(function(){
+		$(this).html(array[cnt3]);
+		cnt3++
+	})
+}
+function randomCards3(){
+	var array = new Array();
+	var cnt5 = 0;
+	var cnt6 = 0;
+	$('#fase3 td').each(function(){
+		array[cnt6] = $(this).html();
+		cnt6++
+	})
+	array = shuffle3(array)
+	$('#fase3 td').each(function(){
+		$(this).html(array[cnt5]);
+		cnt5++
+	})
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+function shuffle2(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+function shuffle3(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+randomCards();
+randomCards2();
+randomCards3();
+</script>
+</body>
+
+</html>
