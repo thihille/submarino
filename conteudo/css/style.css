@@ -5,7 +5,7 @@ html {
 	tap-highlight-color: rgba(0,0,0,0);
 }
 .blueDiv {
-	-webkit-tap-highlight-color: rgba(255,0,0,0.9);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 body {
     -webkit-touch-callout:none;
